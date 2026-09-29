@@ -1,0 +1,13 @@
+{
+  "name": "grademind",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node api.js && npm start --prefix server",
+    "build": "node api.js && npm install --prefix server",
+    "install:all": "npm --prefix client install && npm --prefix server install",
+    "dev": "node api.js && concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
